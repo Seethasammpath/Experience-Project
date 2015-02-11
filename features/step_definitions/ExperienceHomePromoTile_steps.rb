@@ -1,22 +1,20 @@
 
 
-Given(/^I am in promotile module$/) do
+Given(/^I am in promotile module$/) do #Verifying promo tile module
 	expect(page).to have_css(".modern-footer-blocks")
 end
-When(/^I click the FindMyExperience title$/) do
-	@expected_FE =find("#nav-find-my-experience").find("a")["href"] 
+
+When(/^I click the FindMyExperience title$/) do #clicking find my experience tile
+	$link =find("#nav-find-my-experience").find("a")["href"] 
 	find("#nav-find-my-experience").find("a").click
 end
 
-When(/^I click the promotile (\d+)$/) do | thumbnailPosition |
+When(/^I click the promotile (\d+)$/) do | thumbnailPosition | #verifying tiles in position 3,5,8
 	@section = all('.modern-footer-block')
-	$link = @section[thumbnailPosition.to_i].find("a")["href"] 
+	$link = @section[thumbnailPosition.to_i-1].find("a")["href"] 
     page.driver.browser.manage.window.maximize
-	@section[thumbnailPosition.to_i].find("a").click
+	@section[thumbnailPosition.to_i-1].find("a").click
 end
 
-Then(/^The corresponding page displays$/) do
-	expect(current_url).to match $link
-	page.evaluate_script('window.history.back()')
-end
+
 

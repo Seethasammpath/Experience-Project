@@ -1,4 +1,4 @@
-Feature: Verifying Experience home image-carousel.
+Feature: Verifying Experience home image-carousel and navigating to different image by clikcing on left and right arrow.
 Background:
 When I visit the Experience home page 
 

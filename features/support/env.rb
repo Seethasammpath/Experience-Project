@@ -13,3 +13,8 @@ AfterStep('@pause') do
   print "Press Return to continue..."
   STDIN.getc
 end
+$experiencebeachweb_url = 'http://experience.usatoday.com/beach/'
+
+def base_url(path)
+  $experiencebeachweb_url + path
+end

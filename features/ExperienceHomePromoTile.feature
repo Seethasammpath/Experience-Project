@@ -1,4 +1,4 @@
-Feature: Verifying Experience homefronttile.
+Feature: Verifying Experiencehome promo tile module which dispaly differnt front and assets.
 Background:
 When I visit the Experience home page 
 
@@ -6,7 +6,7 @@ When I visit the Experience home page
 Scenario: Verify the promotile
 	Given I am in promotile module
 	When I click the FindMyExperience title
-		Then 'FindMyExperience' front should dispaly
+		Then The corresponding page displays
 	When I click the promotile 3
 		Then The corresponding page displays
 	When I click the promotile 5
