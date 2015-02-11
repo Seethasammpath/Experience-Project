@@ -1,4 +1,4 @@
-Feature: Verifying Experiencehome promo tile module which dispaly differnt front and assets.
+Feature: Verifying Experiencehome promo tile module which dispaly differnt front and assets tile.
 Background:
 When I visit the Experience home page 
 
